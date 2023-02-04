@@ -29,18 +29,9 @@ public class JwtFilter extends GenericFilterBean {
 
     /**
      * jwt 토큰의 인증 정보를 현재 실행중인 스레드 ( Security Context ) 에 저장합니다.
-     * @param servletRequest  The request to process
-     * @param servletResponse The response associated with the request
-     * @param filterChain    Provides access to the next filter in the chain for this
-     *                 filter to pass the request and response to for further
-     *                 processing
-     *
-     * @throws IOException
-     * @throws ServletException
      */
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         String jwt = resolveToken(httpServletRequest);
         String requestURI = httpServletRequest.getRequestURI();
@@ -58,8 +49,6 @@ public class JwtFilter extends GenericFilterBean {
 
     /**
      * HttpServletRequest 객체의 Header에서 token을 꺼내는 역할을 수행합니다.
-     * @param request
-     * @return
      */
     private String resolveToken(HttpServletRequest request) {
         String bearerToken = request.getHeader(AUTHORIZATION_HEADER);

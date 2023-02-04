@@ -1,4 +1,7 @@
 spring:
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher # swagger ?? ?? (Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException)
 
   h2:
     console:
@@ -27,4 +30,23 @@ jwt:
 
 logging:
   level:
-    me.silvernine: DEBUG
+    me.silvernine: debug
+    org.springframework.security: debug
+
+
+# swagger
+# https://blog.jiniworld.me/83
+springdoc:
+  #version: '@project.version@'
+  api-docs.path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-query-params-without-oauth2: true
+    doc-expansion: none
+  paths-to-match:
+    - /**

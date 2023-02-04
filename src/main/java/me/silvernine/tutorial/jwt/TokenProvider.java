@@ -46,6 +46,11 @@ public class TokenProvider implements InitializingBean {
         this.key = Keys.hmacShaKeyFor(keyBytes);
     }
 
+    /**
+     * Authentication 객체로부터 token을 생성합니다.
+     * @param authentication
+     * @return
+     */
     public String createToken(Authentication authentication) {
         String authorities = authentication.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)

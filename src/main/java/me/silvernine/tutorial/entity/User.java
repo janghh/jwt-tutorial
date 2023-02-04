@@ -20,19 +20,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-    @Column(name = "username", length = 50, unique = true)
+    @Column
     private String username;
 
     @JsonIgnore
-    @Column(name = "password", length = 100)
+    @Column
     private String password;
-
-    @Column(name = "nickname", length = 50)
-    private String nickname;
-
-    @JsonIgnore
-    @Column(name = "activated")
-    private boolean activated;
 
     @ManyToMany
     @JoinTable(

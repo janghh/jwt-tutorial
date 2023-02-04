@@ -1,10 +1,5 @@
-# Spring Boot JWT Tutorial
+# Spring Boot JWT Tutorial - Janghh-01
 
-인프런 강의 링크
-https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-jwt#
+기존 코드에서 필수 요소가 아닌 부분들을 걷어내고
 
-GitHub 링크
-https://github.com/SilverNine/spring-boot-jwt-tutorial
-
-노션 링크
-https://silvernine.me/2f2d8f8c9c7544289367b42f260a8546?v=db4266d3090740aba8775cede347e3a0&p=a8ddcc3d07064309bb93df8476581b37&pm=s
+Swagger 및 Swagger에 JWT 토큰 인증 설정을 추가한 버전입니다.
